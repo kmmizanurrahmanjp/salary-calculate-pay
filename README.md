@@ -13,35 +13,34 @@ http://localhost:9090/swagger-ui.html
 
 
 ## Server and Database information
-Application Server port: 9090
-Database Server: MySQL
-Database Name: salary-calculate-pay
-Database Host: localhost
-Database Port: 3306
-Username: mizan
+Application Server port: 9090, 
+Database Server: MySQL, 
+Database Name: salary-calculate-pay, 
+Database Host: localhost, 
+Database Port: 3306, 
+Username: mizan, 
 Password: mizan
 
 ## Task Perform
-Prepare CRUD functionality
-Unique and 4 digit Employee ID
-Relational entities
-Entity and UI validation to input data
-Calculate the salary of each employee
-Transfer the salary amount from main account to employee’s accounts
-Display the name, rank and salary of each employee like salary sheet
+Prepare CRUD functionality, 
+Unique and 4 digit Employee ID, 
+Relational entities, 
+Entity and UI validation to input data, 
+Calculate the salary of each employee, 
+Transfer the salary amount from main account to employee’s accounts, 
+Display the name, rank and salary of each employee like salary sheet, 
 Display the total paid salary and remaining balance of the company account
 
 ## Technology Stacks:
-Spring boot
-Spring data JPA
-Hibernate
-Rest Controller
-SwaggerUI
-MySQL
-Maven
-Thymeleaf
-Bootstrap
-html
-CSS
+Spring boot, 
+Spring data JPA, 
+Hibernate, 
+Rest Controller, 
+SwaggerUI, 
+MySQL, 
+Maven, 
+Thymeleaf, 
+Bootstrap, 
+CSS, 
 jQuery
 
