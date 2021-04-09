@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Company Balance</title>
+<link rel="stylesheet" type="text/css"
+	href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+
+	<div th:insert="fragments/header :: header"></div>
+
+	<div>
+		<div th:insert="fragments/menu :: menu"></div>
+		<div class="content">
+			<div class="container">
+				<h3>Add Company Balance</h3>
+
+				<div class="container">
+					<div id=message class="alert alert-danger"></div>
+				</div>
+				
+				<form>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label>Add Balance:</label> <input type="number"
+									class="form-control" id="companyBalance">
+							</div>
+							<button type="button" id="addBalance" class="btn btn-primary">ADD</button>
+							<button type="button" id="updateBalance" class="btn btn-primary">Update</button>
+						</div>
+						<div class="col-md-6">
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<div class="container">
+				<table id="balanceList" class="table table-hover">
+					<thead>
+						<tr>
+							<th>Account No</th>
+							<th>Total Balance</th>
+							<th>Total Paid Amount</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
+			
+
+		</div>
+	</div>
+
+
+
+	<div th:insert="fragments/footer :: footer"></div>
+
+	<script type="text/javascript" src="webjars/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/company_balance.js"></script>
+</body>
+</html>

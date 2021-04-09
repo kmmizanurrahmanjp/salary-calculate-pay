@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Salary Sheet</title>
+<link rel="stylesheet" type="text/css"
+	href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<style type="text/css">
+h3 {
+	text-align: center;
+}
+
+table {
+	background-color: aliceblue;
+}
+
+.salaryinfo {
+	margin-top: 40px;
+}
+</style>
+</head>
+<body>
+
+	<div th:insert="fragments/header :: header"></div>
+
+	<div>
+		<div th:insert="fragments/menu :: menu"></div>
+		<div class="content">
+			<div class="container">
+				<h2>Generate Salary Sheet By Employee</h2>
+
+				<div class="container">
+					<div id=message class="alert alert-danger"></div>
+				</div>
+
+				<form>
+					<div class="row">
+						<div class="col-md-6">
+
+							<div class="form-group">
+								<select id="employeeIdForSalarySheet" class="form-control"></select>
+							</div>
+							<button type="button" id="generateSalarySheet"
+								class="btn btn-primary">Generate Salary Sheet</button>
+						</div>
+						<div class="col-md-6"></div>
+					</div>
+				</form>
+			</div>
+
+			<div class="container">
+
+				<div class="row">
+					<div class="col-md-3"></div>
+					<div class="col-md-6 salaryinfo">
+						<table class="table">
+							<tbody id="salarySheetInfo">
+							</tbody>
+						</table>
+					</div>
+
+					<div class="col-md-3"></div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<div th:insert="fragments/footer :: footer"></div>
+
+	<script type="text/javascript" src="webjars/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/salary_sheet.js"></script>
+</body>
+</html>

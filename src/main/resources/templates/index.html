@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Employee Information</title>
+<link rel="stylesheet" type="text/css"
+	href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+
+	<div th:insert="fragments/header :: header"></div>
+
+	<div>
+		<div th:insert="fragments/menu :: menu"></div>
+		<div class="content">
+
+			<div class="container">
+				<h3>Employee Information</h3>
+
+				<div class="container">
+					<div id=message class="alert alert-danger"></div>
+				</div>
+
+				<form>
+					<div class="row">
+						<div class="col-md-4">
+							<div>
+								<input type="text" id="employeeId" hidden="true">
+							</div>
+							<div class="form-group">
+								<label>Employee Name:</label> <input type="text"
+									class="form-control" id="employeeName">
+							</div>
+
+
+							<div class="form-group">
+								<label>Grade/Rank:</label> <select id="gradeId"
+									class="form-control"></select>
+							</div>
+
+							<div class="form-group">
+								<label>Mobile:</label> <input type="number" class="form-control"
+									id="mobile">
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label>Address:</label>
+								<textarea class="form-control" id="address" rows="1" cols="30"></textarea>
+							</div>
+
+
+							<div>
+								<input type="text" id="accountNo" hidden="true">
+							</div>
+
+
+							<div class="form-group">
+								<label>Account Name:</label> <input type="text"
+									class="form-control" id="accountName">
+							</div>
+
+
+							<div class="form-group">
+								<label>Account Type:</label> <select class="form-control"
+									id="accountTypeId"></select>
+							</div>
+						</div>
+						<div class="col-md-4">
+
+							<div class="form-group">
+								<label>Bank Name:</label> <select class="form-control"
+									id="bankId" onchange="onChangeBank(this.value);"></select>
+							</div>
+
+							<div class="form-group">
+								<label>Branch Name:</label> <select class="form-control"
+									id="branchId"></select>
+							</div>
+
+
+							<button type="button" id="addEmployee" class="btn btn-primary">ADD/UPDATE</button>
+						</div>
+					</div>
+				</form>
+			</div>
+
+
+
+			<div class="container">
+				<table id="employeeList" class="table table-hover">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>Name</th>
+							<th>Grade</th>
+							<th>Mobile</th>
+							<th>Address</th>
+							<th>Account No</th>
+							<th>Account Name</th>
+							<th>Bank</th>
+							<th>Branch</th>
+							<th colspan="2">Action</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
+		</div>
+
+	</div>
+
+
+	<div th:insert="fragments/footer :: footer"></div>
+
+	<script type="text/javascript" src="webjars/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/employee.js"></script>
+</body>
+</html>

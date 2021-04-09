@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Calculate Salary</title>
+<link rel="stylesheet" type="text/css"
+	href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+
+	<div th:insert="fragments/header :: header"></div>
+
+	<div>
+		<div th:insert="fragments/menu :: menu"></div>
+		<div class="content">
+			<div class="container">
+				<h3>Salary Calculate for All employee</h3>
+				<table id="allemployeeSalaryList" class="table table-hover">
+					<thead>
+						<tr>
+							<th>Employee ID</th>
+							<th>Employee Name</th>
+							<th>Grade</th>
+							<th>Basic Salary</th>
+							<th>House Rent (20%)</th>
+							<th>MedicalAllqwance(15%)</th>
+							<th>Gross Salary</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
+
+		</div>
+
+	</div>
+
+
+	<div th:insert="fragments/footer :: footer"></div>
+
+	<script type="text/javascript" src="webjars/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/salary_calculate.js"></script>
+</body>
+</html>

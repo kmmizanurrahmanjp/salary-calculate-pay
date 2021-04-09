@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Transfer Salary</title>
+<link rel="stylesheet" type="text/css"
+	href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+
+	<div th:insert="fragments/header :: header"></div>
+
+	<div>
+		<div th:insert="fragments/menu :: menu"></div>
+		<div class="content">
+
+			<div class="container">
+				<h3>Salary Transfer</h3>
+				<div class="container">
+					<div id=message class="alert alert-danger"></div>
+				</div>
+
+				<form>
+					<div class="row">
+						<div class="col-md-6">
+
+							<div class="form-group">
+								<select id="employeeIdFoBalanceTransfer" class="form-control"
+									onchange="onChangeEmpId(this.value);"></select>
+							</div>
+
+							<button type="button" id="transferBalance"
+								class="btn btn-primary">Transfer Salary</button>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<div class="form-group" id="employeeNameFoBalanceTransfer">
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<br>
+			<br>
+			<div class="container">
+				<!-- <h4>List of salary paid employee</h4> -->
+				<table id="employeePaidSalaryList" class="table table-hover">
+					<thead>
+					</thead>
+					<tbody></tbody>
+				</table>
+			</div>
+		</div>
+
+	</div>
+
+
+	<div th:insert="fragments/footer :: footer"></div>
+
+	<script type="text/javascript" src="webjars/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/salary_transfer.js"></script>
+</body>
+</html>

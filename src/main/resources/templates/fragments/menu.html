@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" type="text/css"
+	href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+
+	<nav th:fragment="menu">
+		<a href="/" class="active">Employee Information</a> <br/>
+		<a href="/lowest_salary">Lowest Grade Salary</a> <br/>
+		<a href="/company_balance">Company Balance</a> <br/>
+		<a href="/salary_calculate">Salary Calculate</a><br/>
+		<a href="/salary_transfer">Transfer Salary</a> <br/>
+		<a href="/salary_sheet">Salary Sheet</a> <br/>
+		<a href="/balance_sheet">Balance Sheet</a><br/>
+	</nav>
+
+<script type="text/javascript" src="webjars/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

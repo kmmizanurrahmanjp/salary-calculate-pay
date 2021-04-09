@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title>Lowest Grade Salary</title>
+<link rel="stylesheet" type="text/css"
+	href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+
+	<div th:insert="fragments/header :: header"></div>
+
+	<div th:insert="fragments/menu :: menu"></div>
+	<div class="content">
+		<div class="container">
+			<h3>Add lowest grade employee salary</h3>
+
+			<div class="container">
+				<div id=message class="alert alert-danger"></div>
+			</div>
+			<form>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label>Lowest Grade Salary:</label> <input type="number"
+								class="form-control" id="lowestSalary">
+						</div>
+						<button type="button" id="addSalary" class="btn btn-primary">ADD/UPDATE</button>
+					</div>
+					<div class="col-md-6"></div>
+				</div>
+			</form>
+		</div>
+
+		<div class="container">
+			<table id="basicSalaryList" class="table table-hover">
+				<thead>
+					<tr>
+						<th>Grade</th>
+						<th>Basic Salary</th>
+						<th>House Rent (20%)</th>
+						<th>Medical Allowance (15%)</th>
+						<th>Gross Salary</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+
+	</div>
+
+
+	<div th:insert="fragments/footer :: footer"></div>
+
+	<script type="text/javascript" src="webjars/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript" src="js/lowest_salary.js"></script>
+</body>
+</html>
